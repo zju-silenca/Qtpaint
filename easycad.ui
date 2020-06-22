@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>easyCADClass</class>
+ <widget class="QMainWindow" name="easyCADClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1078</width>
+    <height>666</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>easyCAD</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QGraphicsView" name="paintArea">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>1920</width>
+        <height>1080</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="midLineWidth">
+       <number>0</number>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1078</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menucaidan">
+    <property name="title">
+     <string>菜单</string>
+    </property>
+    <addaction name="save"/>
+    <addaction name="savexml"/>
+    <addaction name="pen_setting"/>
+    <addaction name="picture_setting"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="help"/>
+    <addaction name="about"/>
+   </widget>
+   <addaction name="menucaidan"/>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
+   <property name="movable">
+    <bool>true</bool>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonIconOnly</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="select"/>
+   <addaction name="eraser"/>
+   <addaction name="line"/>
+   <addaction name="addText"/>
+   <addaction name="addoval"/>
+   <addaction name="picture"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar">
+   <property name="contextMenuPolicy">
+    <enum>Qt::DefaultContextMenu</enum>
+   </property>
+   <property name="acceptDrops">
+    <bool>false</bool>
+   </property>
+   <property name="sizeGripEnabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <action name="addText">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="easycad.qrc">
+     <normaloff>:/icon/icon/Text_off.png</normaloff>
+     <normalon>:/icon/icon/Text_on.png</normalon>:/icon/icon/Text_off.png</iconset>
+   </property>
+   <property name="text">
+    <string>文字</string>
+   </property>
+   <property name="toolTip">
+    <string>添加文字</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
+   </property>
+  </action>
+  <action name="addoval">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="easycad.qrc">
+     <normaloff>:/icon/icon/oval_off.png</normaloff>
+     <normalon>:/icon/icon/oval_on.png</normalon>:/icon/icon/oval_off.png</iconset>
+   </property>
+   <property name="text">
+    <string>椭圆</string>
+   </property>
+   <property name="toolTip">
+    <string>椭圆工具</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="eraser">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="easycad.qrc">
+     <normaloff>:/icon/icon/eraser_0ff.png</normaloff>
+     <normalon>:/icon/icon/eraser_on.png</normalon>:/icon/icon/eraser_0ff.png</iconset>
+   </property>
+   <property name="text">
+    <string>橡皮擦</string>
+   </property>
+   <property name="toolTip">
+    <string>橡皮擦</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="picture">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="easycad.qrc">
+     <normaloff>:/icon/icon/picture_off.png</normaloff>
+     <normalon>:/icon/icon/picture_on.png</normalon>:/icon/icon/picture_off.png</iconset>
+   </property>
+   <property name="text">
+    <string>图片</string>
+   </property>
+   <property name="toolTip">
+    <string>添加图片</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="line">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="easycad.qrc">
+     <normaloff>:/icon/icon/brush_off.png</normaloff>
+     <normalon>:/icon/icon/brush_on.png</normalon>:/icon/icon/brush_off.png</iconset>
+   </property>
+   <property name="text">
+    <string>直线</string>
+   </property>
+   <property name="toolTip">
+    <string>直线</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="select">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="easycad.qrc">
+     <normaloff>:/icon/icon/select_off.png</normaloff>
+     <normalon>:/icon/icon/select_on.png</normalon>:/icon/icon/select_off.png</iconset>
+   </property>
+   <property name="text">
+    <string>选择工具</string>
+   </property>
+   <property name="toolTip">
+    <string>选择工具</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Space</string>
+   </property>
+  </action>
+  <action name="about">
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+  <action name="pen_setting">
+   <property name="text">
+    <string>画笔设置</string>
+   </property>
+  </action>
+  <action name="picture_setting">
+   <property name="text">
+    <string>图片设置</string>
+   </property>
+  </action>
+  <action name="save">
+   <property name="text">
+    <string>保存为图片</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="savexml">
+   <property name="text">
+    <string>保存为xml</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="rect">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="easycad.qrc">
+     <normaloff>:/icon/icon/rect_off.png</normaloff>
+     <normalon>:/icon/icon/rect_on.png</normalon>:/icon/icon/rect_off.png</iconset>
+   </property>
+   <property name="text">
+    <string>矩形工具（有问题，先废弃吧</string>
+   </property>
+   <property name="toolTip">
+    <string>矩形工具</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="help">
+   <property name="text">
+    <string>帮助</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="easycad.qrc"/>
+ </resources>
+ <connections/>
+</ui>

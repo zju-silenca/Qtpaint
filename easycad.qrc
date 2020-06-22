@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>icon/brush_off.png</file>
+        <file>icon/brush_on.png</file>
+        <file>icon/eraser_0ff.png</file>
+        <file>icon/eraser_on.png</file>
+        <file>icon/lineadjust_off.png</file>
+        <file>icon/lineadjust_on.png</file>
+        <file>icon/oval_off.png</file>
+        <file>icon/oval_on.png</file>
+        <file>icon/picture_off.png</file>
+        <file>icon/picture_on.png</file>
+        <file>icon/Text_off.png</file>
+        <file>icon/Text_on.png</file>
+        <file>icon/select_off.png</file>
+        <file>icon/select_on.png</file>
+        <file>icon/rect_off.png</file>
+        <file>icon/rect_on.png</file>
+    </qresource>
+</RCC>
